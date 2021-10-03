@@ -170,7 +170,7 @@
     Block replica on datanode/rack: 435f62cabe7c/default-rack is HEALTHY
 
 ### Блок 3. ###
-###### Mapper и Reducer могут запускаться как локальный код, так и MapReduce. Для корректного запуска пришлось немного модифиривать файлик [docker-compose.yml.](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/docker-hadoop/docker-compose.yml) и соответствующие DockerFile ######
+###### Mapper и Reducer могут запускаться как локальный код, так и MapReduce. Для корректного запуска пришлось немного модифиривать файлик [docker-compose.yml](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/docker-hadoop/docker-compose.yml) и соответствующие DockerFile ######
 
     bash run.sh AB_NYC_2019.csv result.txt
 
