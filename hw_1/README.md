@@ -1,6 +1,6 @@
 ### Блок 1. ###
 
-[Скрин namenode](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/Screenshot%20from%202021-10-03%2022-18-06.png?raw=true)
+[Скрин namenode](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/Screenshot%20from%202021-10-03%2022-18-06.png?raw=true) \
 [Скрин resourcemanager](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/Screenshot%20from%202021-10-03%2022-17-41.png?raw=true)
 
 
