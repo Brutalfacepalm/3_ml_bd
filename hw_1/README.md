@@ -11,9 +11,11 @@
 ###### Посмотрим на hdfs ######
     root@cb9aa3ae4ea9:/# hdfs dfs -ls /
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+
     Found 1 items
     drwxr-xr-x   - root supergroup          0 2021-10-01 16:56 /rmstate
+
 </details>
 
 #### -mkdir, -touchz ####
@@ -32,8 +34,10 @@
 ###### (5) Удалим файл ######
     root@cb9aa3ae4ea9:/# hdfs dfs -rm -skipTrash /block_2_1/block_2_2/block_2_4_empty_file
 <details>
-  <summary>Output</summary>
-  Deleted /block_2_1/block_2_2/block_2_4_empty_file
+    <summary>Output</summary>
+
+    Deleted /block_2_1/block_2_2/block_2_4_empty_file
+
 </details>
 
 ###### (6) Удалим папки. Удалять можно поштучно обычным mkdir, а можно -rm -R, тогда удаление будет рекурсивно. ######
@@ -49,14 +53,17 @@
     root@cb9aa3ae4ea9:/# hdfs dfs -mkdir /block_2_1_put
     root@cb9aa3ae4ea9:/# hdfs dfs -put requirements.txt /block_2_1_put/requirements.txt
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+
     2021-10-01 17:53:11,102 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
 </details>
 
 ###### (2) Содержимое файла ######
     root@cb9aa3ae4ea9:/# hdfs dfs -cat /block_2_1_put/requirements.txt
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+
     2021-10-01 18:02:01,739 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
     Flask==1.1.2
     beautifulsoup4==4.9.1
@@ -68,47 +75,56 @@
     pytest-cov
     PyYAML==5.3.1
     requests==2.24.0
+
 </details>
 
 ###### (3) Конец файла. Можно выводить через -cat и | tail -n,на выходе будет n строк с конца. А можно выводить через -tail, тогда выведится ровно 1 КБ данных с конца. ######
     root@cb9aa3ae4ea9:/# hdfs dfs -cat /block_2_1_put/requirements.txt | tail -5
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+
     2021-10-01 18:02:22,675 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
     pylint==2.6.0
     pytest==6.0.2
     pytest-cov
     PyYAML==5.3.1
     requests==2.24.0
+
 </details>
 
 ###### (4) Начало файла ######
     root@cb9aa3ae4ea9:/# hdfs dfs -cat /block_2_1_put/requirements.txt | head -5
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     2021-10-01 18:02:01,739 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
     Flask==1.1.2
     beautifulsoup4==4.9.1
     gunicorn==20.0.4
     jupyter==1.0.0
     lxml==4.5.2
+
 </details>
 
 ###### (5) Скопируем и перместим файл ######
     root@cb9aa3ae4ea9:/# hdfs dfs -cp /block_2_1_put/requirements.txt /requirements.txt
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+
     2021-10-01 18:03:28,887 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
     2021-10-01 18:03:29,034 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
 </details>
 
     root@cb9aa3ae4ea9:/# hdfs dfs -ls /
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     Found 3 items
     drwxr-xr-x   - root supergroup          0 2021-10-01 17:59 /block_2_1_put
     -rw-r--r--   3 root supergroup       8289 2021-10-01 18:03 /requirements.txt
     drwxr-xr-x   - root supergroup          0 2021-10-01 16:56 /rmstate
+
 </details>
 
 #### fsck ####
@@ -116,33 +132,40 @@
 
     root@cb9aa3ae4ea9:/# hdfs dfs -ls /
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     Found 2 items
     -rw-r--r--   3 root supergroup       8289 2021-10-01 18:03 /requirements.txt
     drwxr-xr-x   - root supergroup          0 2021-10-01 16:56 /rmstate
+
 </details>
 
     root@cb9aa3ae4ea9:/# hdfs dfs -setrep -w 2 /requirements.txt
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     Replication 2 set: /requirements.txt
     Waiting for /requirements.txt ...
     WARNING: the waiting time may be long for DECREASING the number of replications.
     . done
+
 </details>
 
     root@cb9aa3ae4ea9:/# hdfs dfs -ls /
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     Found 2 items
     -rw-r--r--   2 root supergroup       8289 2021-10-01 18:03 /requirements.txt
     drwxr-xr-x   - root supergroup          0 2021-10-01 16:56 /rmstate
+
 </details>
 
 ###### (3) Информация по файлу, блокам и расположениям ######
     root@cb9aa3ae4ea9:/# hdfs fsck /requirements.txt -files -blocks -locations
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
+    
     Connecting to namenode via http://namenode:9870/fsck?ugi=root&files=1&blocks=1&locations=1&path=%2Frequirements.txt
     FSCK started by root (auth:SIMPLE) from /172.20.0.4 for path /requirements.txt at Fri Oct 01 18:08:44 UTC 2021
     /requirements.txt 8289 bytes, replicated: replication=2, 1 block(s):  OK
@@ -179,6 +202,7 @@
      Missing internal blocks:	0
     FSCK ended at Fri Oct 01 18:08:44 UTC 2021 in 4 milliseconds
     The filesystem under path '/requirements.txt' is HEALTHY
+
 </details>
 
 ###### (4) На предыдущем шаге ID блока начинается на blk. GS number - число в конце после. Запрос по блоку можно сдлеть двумя способами. ######
@@ -186,7 +210,7 @@
     root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843
     root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843_1019.meta
 <details>
-  <summary>Output</summary>
+    <summary>Output</summary>
 
     Connecting to namenode via http://namenode:9870/fsck?ugi=root&blockId=blk_1073741843+&path=%2F
     FSCK started by root (auth:SIMPLE) from /172.20.0.4 at Fri Oct 01 18:14:12 UTC 2021
@@ -201,7 +225,7 @@
     No. of corrupted Replica: 0
     Block replica on datanode/rack: 4ebbb45b3923/default-rack is HEALTHY
     Block replica on datanode/rack: 435f62cabe7c/default-rack is HEALTHY
-    
+
 </details>
 
 ### Блок 3. ###
