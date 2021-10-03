@@ -152,8 +152,8 @@
 
 ###### (4) На предыдущем шаге ID блока начинается на blk. GS number - число в конце после. Запрос по блоку можно сдлеть двумя способами. ######
 
-**root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843**
-**root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843_1019.meta**
+    <b>root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843</b>
+    <b>root@cb9aa3ae4ea9:/# hdfs fsck -blockId blk_1073741843_1019.meta</b>
     Connecting to namenode via http://namenode:9870/fsck?ugi=root&blockId=blk_1073741843+&path=%2F
     FSCK started by root (auth:SIMPLE) from /172.20.0.4 at Fri Oct 01 18:14:12 UTC 2021
 
