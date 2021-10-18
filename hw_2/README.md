@@ -1,7 +1,7 @@
 ### Блок 1. ###
 
-[Скрин beeline](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/Screenshot%20from%202021-10-03%2022-18-06.png?raw=true) \
-[Скрин hue](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_1/Screenshot%20from%202021-10-03%2022-17-41.png?raw=true)
+[Скрин beeline](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_2/beeline.png?raw=true) \
+[Скрин hue](https://github.com/Brutalfacepalm/3_ml_bd/blob/master/hw_2/hue.png?raw=true)
 
 
 ### Блок 2. ###
