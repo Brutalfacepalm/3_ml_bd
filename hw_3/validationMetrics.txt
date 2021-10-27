@@ -1,0 +1,2 @@
+Mean absolute error: 3367.4746692728017 
+Root mean square error: 84230.62477011954
