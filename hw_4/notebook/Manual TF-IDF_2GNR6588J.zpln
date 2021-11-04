@@ -3,7 +3,7 @@
     {
       "text": "spark",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 09:27:22.622",
+      "dateUpdated": "2021-11-04 09:48:21.868",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -23,20 +23,29 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.SparkSession\u001b[0m \u003d org.apache.spark.sql.SparkSession@3b8ae3d7\n"
+          }
+        ]
+      },
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635937435030_1023153590",
       "id": "paragraph_1635937435030_1023153590",
       "dateCreated": "2021-11-03 11:03:55.032",
-      "dateStarted": "2021-11-04 09:27:22.694",
-      "dateFinished": "2021-11-04 09:27:12.704",
-      "status": "RUNNING"
+      "dateStarted": "2021-11-04 09:48:21.914",
+      "dateFinished": "2021-11-04 09:48:45.056",
+      "status": "FINISHED"
     },
     {
       "text": "import org.apache.spark.sql._\nimport org.apache.spark.sql.functions._",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 09:17:30.386",
+      "dateUpdated": "2021-11-04 09:48:47.878",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -56,11 +65,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "org.apache.zeppelin.interpreter.InterpreterException: java.io.IOException: Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 46821 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 09:17:29,246] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 46821 spark-shared_process :\n\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.open(RemoteInterpreter.java:129)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getFormType(RemoteInterpreter.java:271)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:440)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:71)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:172)\n\tat org.apache.zeppelin.scheduler.AbstractScheduler.runJob(AbstractScheduler.java:132)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:182)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.io.IOException: Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 46821 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 09:17:29,246] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 46821 spark-shared_process :\n\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.internal_create(RemoteInterpreter.java:157)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.open(RemoteInterpreter.java:126)\n\t... 13 more\n"
+            "data": "import org.apache.spark.sql._\nimport org.apache.spark.sql.functions._\n"
           }
         ]
       },
@@ -70,14 +79,14 @@
       "jobName": "paragraph_1635955849370_816844935",
       "id": "paragraph_1635955849370_816844935",
       "dateCreated": "2021-11-03 16:10:49.373",
-      "dateStarted": "2021-11-04 09:18:25.683",
-      "dateFinished": "2021-11-04 09:18:25.704",
-      "status": "ERROR"
+      "dateStarted": "2021-11-04 09:48:47.901",
+      "dateFinished": "2021-11-04 09:48:48.429",
+      "status": "FINISHED"
     },
     {
       "text": "import spark.implicits._",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 09:17:31.961",
+      "dateUpdated": "2021-11-04 09:48:50.414",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -97,11 +106,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "org.apache.zeppelin.interpreter.InterpreterException: java.io.IOException: Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 46821 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 09:17:29,246] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 46821 spark-shared_process :\n\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.open(RemoteInterpreter.java:129)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.getFormType(RemoteInterpreter.java:271)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:440)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:71)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:172)\n\tat org.apache.zeppelin.scheduler.AbstractScheduler.runJob(AbstractScheduler.java:132)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:182)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.io.IOException: Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 46821 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 09:17:29,246] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--d099ab5a0443.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 46821 spark-shared_process :\n\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.internal_create(RemoteInterpreter.java:157)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.open(RemoteInterpreter.java:126)\n\t... 13 more\n"
+            "data": "import spark.implicits._\n"
           }
         ]
       },
@@ -111,14 +120,14 @@
       "jobName": "paragraph_1635955976029_116622093",
       "id": "paragraph_1635955976029_116622093",
       "dateCreated": "2021-11-03 16:12:56.036",
-      "dateStarted": "2021-11-04 09:18:25.808",
-      "dateFinished": "2021-11-04 09:18:25.869",
-      "status": "ERROR"
+      "dateStarted": "2021-11-04 09:48:50.429",
+      "dateFinished": "2021-11-04 09:48:52.135",
+      "status": "FINISHED"
     },
     {
-      "text": "val df \u003d spark.read.format(\"csv\").option(\"header\", \"true\").load(\"/data/tripadvisor_hotel_reviews.csv\").drop(\"Rating\").select(split(lower(trim(regexp_replace(col(\"Review\"),\"\\\\p{Punct}\", \"\"))),\" \").as(\"ReviewSeq\")).withColumn(\"doc_id\", monotonically_increasing_id())",
+      "text": "val hotels_review \u003d spark.read.format(\"csv\").option(\"header\", \"true\").load(\"/data/tripadvisor_hotel_reviews.csv\")\n        .drop(\"Rating\").select(split(lower(trim(regexp_replace(col(\"Review\"),\"\\\\p{Punct}\", \"\"))),\" \").as(\"ReviewSeq\"))\n        .withColumn(\"doc_id\", monotonically_increasing_id())",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:40:51.144",
+      "dateUpdated": "2021-11-04 13:00:57.116",
       "progress": 100,
       "config": {
         "editorSetting": {
@@ -142,7 +151,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [ReviewSeq: array\u003cstring\u003e, doc_id: bigint]\n"
+            "data": "\u001b[1m\u001b[34mhotels_review\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [ReviewSeq: array\u003cstring\u003e, doc_id: bigint]\n"
           }
         ]
       },
@@ -155,7 +164,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://5a69afe53fd0:4040/jobs/job?id\u003d0"
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d33"
             }
           ],
           "interpreterSettingId": "spark"
@@ -165,14 +174,14 @@
       "jobName": "paragraph_1635935428942_550046862",
       "id": "paragraph_1635935428942_550046862",
       "dateCreated": "2021-11-03 10:30:28.943",
-      "dateStarted": "2021-11-04 00:40:51.213",
-      "dateFinished": "2021-11-04 00:41:35.731",
+      "dateStarted": "2021-11-04 13:00:57.120",
+      "dateFinished": "2021-11-04 13:00:57.750",
       "status": "FINISHED"
     },
     {
-      "text": "val columns \u003d df.columns.map(col) :+\n      (explode(col(\"ReviewSeq\")) as \"token\")",
+      "text": "val columns \u003d hotels_review.columns.map(col) :+\n      (explode(col(\"ReviewSeq\")) as \"token\")",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:41:37.274",
+      "dateUpdated": "2021-11-04 13:01:00.258",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -206,14 +215,14 @@
       "jobName": "paragraph_1635984451846_1672453444",
       "id": "paragraph_1635984451846_1672453444",
       "dateCreated": "2021-11-04 00:07:31.850",
-      "dateStarted": "2021-11-04 00:41:37.323",
-      "dateFinished": "2021-11-04 00:41:57.287",
+      "dateStarted": "2021-11-04 13:01:00.269",
+      "dateFinished": "2021-11-04 13:01:00.804",
       "status": "FINISHED"
     },
     {
-      "text": "val unfoldedDocs \u003d df.select(columns: _*).groupBy(\"doc_id\", \"token\")\n      .agg(count(\"ReviewSeq\") as \"tf\")",
+      "text": "val column_tokens \u003d hotels_review.select(columns: _*)\n\nval tf \u003d column_tokens.groupBy(\"doc_id\", \"token\")\n      .agg(count(\"ReviewSeq\") as \"tf\")",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:41:59.729",
+      "dateUpdated": "2021-11-04 13:02:46.899",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -237,7 +246,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\u001b[1m\u001b[34munfoldedDocs\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [doc_id: bigint, token: string ... 1 more field]\n"
+            "data": "\u001b[1m\u001b[34mcolumn_tokens\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [ReviewSeq: array\u003cstring\u003e, doc_id: bigint ... 1 more field]\n\u001b[1m\u001b[34mtf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [doc_id: bigint, token: string ... 1 more field]\n"
           }
         ]
       },
@@ -247,14 +256,14 @@
       "jobName": "paragraph_1635984455790_2016390036",
       "id": "paragraph_1635984455790_2016390036",
       "dateCreated": "2021-11-04 00:07:35.792",
-      "dateStarted": "2021-11-04 00:41:59.795",
-      "dateFinished": "2021-11-04 00:42:07.785",
+      "dateStarted": "2021-11-04 13:02:46.906",
+      "dateFinished": "2021-11-04 13:02:47.294",
       "status": "FINISHED"
     },
     {
-      "text": "val unfoldedDocsDF \u003d unfoldedDocs.groupBy(\"token\")\n      .agg(countDistinct(\"doc_id\") as \"df\")",
+      "text": "val df \u003d tf.groupBy(\"token\")\n      .agg(countDistinct(\"doc_id\") as \"df\").orderBy(desc(\"df\")).limit(100)",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:42:10.688",
+      "dateUpdated": "2021-11-04 13:18:41.654",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -278,7 +287,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\u001b[1m\u001b[34munfoldedDocsDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [token: string, df: bigint]\n"
+            "data": "\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [token: string, df: bigint]\n"
           }
         ]
       },
@@ -288,15 +297,15 @@
       "jobName": "paragraph_1635984458603_1572880896",
       "id": "paragraph_1635984458603_1572880896",
       "dateCreated": "2021-11-04 00:07:38.604",
-      "dateStarted": "2021-11-04 00:42:10.730",
-      "dateFinished": "2021-11-04 00:42:17.810",
+      "dateStarted": "2021-11-04 13:18:41.674",
+      "dateFinished": "2021-11-04 13:18:42.159",
       "status": "FINISHED"
     },
     {
-      "text": "df.schema",
+      "text": "hotels_review.show",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:42:19.627",
-      "progress": 0,
+      "dateUpdated": "2021-11-04 13:02:53.827",
+      "progress": 25,
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -319,89 +328,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\u001b[1m\u001b[34mres2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.types.StructType\u001b[0m \u003d StructType(StructField(ReviewSeq,ArrayType(StringType,true),true), StructField(doc_id,LongType,false))\n"
-          }
-        ]
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635956542708_1838537448",
-      "id": "paragraph_1635956542708_1838537448",
-      "dateCreated": "2021-11-03 16:22:22.709",
-      "dateStarted": "2021-11-04 00:42:19.675",
-      "dateFinished": "2021-11-04 00:42:23.938",
-      "status": "FINISHED"
-    },
-    {
-      "text": "df.show",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:43:59.700",
-      "progress": 100,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "ERROR",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--5a69afe53fd0.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 38471 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 00:37:27,360] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--5a69afe53fd0.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 38471 spark-shared_process :\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 00:37:30,165] ({RegisterThread} RemoteInterpreterServer.java[run]:592) - Start registration\n INFO [2021-11-04 00:37:30,171] ({RemoteInterpreterServer-Thread} RemoteInterpreterServer.java[run]:194) - Launching ThriftServer at 172.17.0.2:37705\n INFO [2021-11-04 00:37:32,047] ({RegisterThread} RemoteInterpreterServer.java[run]:606) - Registering interpreter process\n"
-          }
-        ]
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635950430523_2021113235",
-      "id": "paragraph_1635950430523_2021113235",
-      "dateCreated": "2021-11-03 14:40:30.528",
-      "dateStarted": "2021-11-04 00:43:59.742",
-      "dateFinished": "2021-11-04 00:43:59.760",
-      "status": "ERROR"
-    },
-    {
-      "text": "unfoldedDocs.show",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:42:47.210",
-      "progress": 80,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "ERROR",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "java.lang.RuntimeException\n\tat org.apache.zeppelin.interpreter.remote.PooledRemoteClient.callRemoteFunction(PooledRemoteClient.java:114)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.callRemoteFunction(RemoteInterpreterProcess.java:99)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:208)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:486)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:71)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:172)\n\tat org.apache.zeppelin.scheduler.AbstractScheduler.runJob(AbstractScheduler.java:132)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:182)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+            "data": "+--------------------+------+\n|           ReviewSeq|doc_id|\n+--------------------+------+\n|[nice, hotel, exp...|     0|\n|[ok, nothing, spe...|     1|\n|[nice, rooms, not...|     2|\n|[unique, great, s...|     3|\n|[great, stay, gre...|     4|\n|[love, monaco, st...|     5|\n|[cozy, stay, rain...|     6|\n|[excellent, staff...|     7|\n|[hotel, stayed, h...|     8|\n|[excellent, staye...|     9|\n|[poor, value, sta...|    10|\n|[nice, value, sea...|    11|\n|[nice, hotel, goo...|    12|\n|[nice, hotel, not...|    13|\n|[great, hotel, ni...|    14|\n|[horrible, custom...|    15|\n|[disappointed, sa...|    16|\n|[fantastic, stay,...|    17|\n|[good, choice, ho...|    18|\n|[hmmmmm, say, rea...|    19|\n+--------------------+------+\nonly showing top 20 rows\n\n"
           }
         ]
       },
@@ -414,7 +341,115 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://5a69afe53fd0:4040/jobs/job?id\u003d2"
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d36"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1635950430523_2021113235",
+      "id": "paragraph_1635950430523_2021113235",
+      "dateCreated": "2021-11-03 14:40:30.528",
+      "dateStarted": "2021-11-04 13:02:53.837",
+      "dateFinished": "2021-11-04 13:02:54.123",
+      "status": "FINISHED"
+    },
+    {
+      "text": "column_tokens.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-04 13:02:57.006",
+      "progress": 25,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+------+-----------+\n|           ReviewSeq|doc_id|      token|\n+--------------------+------+-----------+\n|[nice, hotel, exp...|     0|       nice|\n|[nice, hotel, exp...|     0|      hotel|\n|[nice, hotel, exp...|     0|  expensive|\n|[nice, hotel, exp...|     0|    parking|\n|[nice, hotel, exp...|     0|        got|\n|[nice, hotel, exp...|     0|       good|\n|[nice, hotel, exp...|     0|       deal|\n|[nice, hotel, exp...|     0|       stay|\n|[nice, hotel, exp...|     0|      hotel|\n|[nice, hotel, exp...|     0|anniversary|\n|[nice, hotel, exp...|     0|    arrived|\n|[nice, hotel, exp...|     0|       late|\n|[nice, hotel, exp...|     0|    evening|\n|[nice, hotel, exp...|     0|       took|\n|[nice, hotel, exp...|     0|     advice|\n|[nice, hotel, exp...|     0|   previous|\n|[nice, hotel, exp...|     0|    reviews|\n|[nice, hotel, exp...|     0|        did|\n|[nice, hotel, exp...|     0|      valet|\n|[nice, hotel, exp...|     0|    parking|\n+--------------------+------+-----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d37"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1636030908154_181708248",
+      "id": "paragraph_1636030908154_181708248",
+      "dateCreated": "2021-11-04 13:01:48.155",
+      "dateStarted": "2021-11-04 13:02:57.016",
+      "dateFinished": "2021-11-04 13:02:57.340",
+      "status": "FINISHED"
+    },
+    {
+      "text": "tf.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-04 13:03:02.887",
+      "progress": 40,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+----------+---+\n|doc_id|     token| tf|\n+------+----------+---+\n|     0|      room|  3|\n|     1|    better|  2|\n|     6|attractive|  1|\n|     6|  positive|  1|\n|     7| concierge|  2|\n|    10|        nt|  2|\n|    12|     clean|  1|\n|    12|   concert|  1|\n|    15|      stay|  2|\n|    16|      desk|  6|\n|    19|       bed|  1|\n|    30| excellent|  1|\n|    32|    really|  1|\n|    44| cringeshe|  1|\n|    46|      mind|  1|\n|    51|    pretty|  1|\n|    52|     steer|  1|\n|    54|     tacky|  1|\n|    58|   staying|  1|\n|    63|       etc|  1|\n+------+----------+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d38"
             }
           ],
           "interpreterSettingId": "spark"
@@ -424,14 +459,68 @@
       "jobName": "paragraph_1635966005611_604821506",
       "id": "paragraph_1635966005611_604821506",
       "dateCreated": "2021-11-03 19:00:05.618",
-      "dateStarted": "2021-11-04 00:42:47.253",
-      "dateFinished": "2021-11-04 00:43:42.955",
-      "status": "ERROR"
+      "dateStarted": "2021-11-04 13:03:02.893",
+      "dateFinished": "2021-11-04 13:03:05.000",
+      "status": "FINISHED"
     },
     {
-      "text": "unfoldedDocsDF.schema",
+      "text": "df.show",
       "user": "anonymous",
-      "dateUpdated": "2021-11-04 00:43:49.098",
+      "dateUpdated": "2021-11-04 13:18:47.095",
+      "progress": 97,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+-----+\n|    token|   df|\n+---------+-----+\n|    hotel|16319|\n|     room|14049|\n|      not|12123|\n|    staff|11522|\n|    great|11020|\n|     stay|10094|\n|     good| 9277|\n|   stayed| 8549|\n|       nt| 8379|\n|    rooms| 8336|\n| location| 8164|\n|     just| 7736|\n|    clean| 7648|\n|     nice| 7415|\n|      did| 7204|\n|breakfast| 7111|\n|       no| 6809|\n|    night| 6328|\n|  service| 6228|\n|     time| 6151|\n+---------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d49"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1635966144439_189714717",
+      "id": "paragraph_1635966144439_189714717",
+      "dateCreated": "2021-11-03 19:02:24.442",
+      "dateStarted": "2021-11-04 13:18:47.105",
+      "dateFinished": "2021-11-04 13:18:57.271",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val calcIdfIDF \u003d udf { (df: Long, cnt: Long) \u003d\u003e math.log((cnt + 1).toFloat / (df + 1).toFloat) }\nval idf \u003d df.withColumn(\"idf\", calcIdfIDF(col(\"df\"), lit(hotels_review.count)))",
+      "user": "anonymous",
+      "dateUpdated": "2021-11-04 13:19:39.010",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -451,125 +540,42 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "Interpreter process is not running\nInterpreter download command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--5a69afe53fd0.log -cp :/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterDownloader 172.17.0.2 38471 spark /opt/zeppelin/local-repo/spark\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 00:37:27,360] ({main} RemoteInterpreterDownloader.java[syncAllLibraries]:73) - Loading all libraries for interpreter spark to /opt/zeppelin/local-repo/spark\n[INFO] Interpreter launch command: /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///opt/zeppelin/conf/log4j.properties -Dlog4j.configurationFile\u003dfile:///opt/zeppelin/conf/log4j2.properties -Dzeppelin.log.file\u003d/opt/zeppelin/logs/zeppelin-interpreter-spark-shared_process--5a69afe53fd0.log -Xmx1024m -cp :/opt/zeppelin/local-repo/spark/*:/opt/zeppelin/interpreter/spark/dep/*:/opt/zeppelin/interpreter/spark/*:::/opt/zeppelin/interpreter/zeppelin-interpreter-shaded-0.10.0.jar org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer 172.17.0.2 38471 spark-shared_process :\nSLF4J: Class path contains multiple SLF4J bindings.\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/dep/zeppelin-spark-dependencies-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: Found binding in [jar:file:/opt/zeppelin/interpreter/spark/spark-interpreter-0.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]\nSLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\nSLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]\n INFO [2021-11-04 00:37:30,165] ({RegisterThread} RemoteInterpreterServer.java[run]:592) - Start registration\n INFO [2021-11-04 00:37:30,171] ({RemoteInterpreterServer-Thread} RemoteInterpreterServer.java[run]:194) - Launching ThriftServer at 172.17.0.2:37705\n INFO [2021-11-04 00:37:32,047] ({RegisterThread} RemoteInterpreterServer.java[run]:606) - Registering interpreter process\n"
+            "data": "\u001b[1m\u001b[34mcalcIdfIDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.expressions.UserDefinedFunction\u001b[0m \u003d UserDefinedFunction(\u003cfunction2\u003e,DoubleType,Some(List(LongType, LongType)))\n\u001b[1m\u001b[34midf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [token: string, df: bigint ... 1 more field]\n"
           }
         ]
       },
       "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635969876910_1906291799",
-      "id": "paragraph_1635969876910_1906291799",
-      "dateCreated": "2021-11-03 20:04:36.917",
-      "dateStarted": "2021-11-04 00:43:49.158",
-      "dateFinished": "2021-11-04 00:43:49.186",
-      "status": "ERROR"
-    },
-    {
-      "text": "unfoldedDocsDF.show",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:56:28.948",
-      "progress": 100,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d52"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
       },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635966144439_189714717",
-      "id": "paragraph_1635966144439_189714717",
-      "dateCreated": "2021-11-03 19:02:24.442",
-      "dateStarted": "2021-11-03 19:10:48.213",
-      "dateFinished": "2021-11-03 19:11:37.620",
-      "status": "ABORT"
-    },
-    {
-      "text": "def calcIdf(dfs:Long) : Double \u003d {\n    val docCount \u003d df.count\n    val idf \u003d math.log((docCount + 1) / (dfs + 1))\n    return idf\n}",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:56:31.110",
-      "progress": 100,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635967146462_1856525684",
-      "id": "paragraph_1635967146462_1856525684",
-      "dateCreated": "2021-11-03 19:19:06.465",
-      "dateStarted": "2021-11-03 20:38:57.783",
-      "dateFinished": "2021-11-03 20:39:03.811",
-      "status": "ABORT"
-    },
-    {
-      "text": "val calcIdfUdf \u003d udf { dfs: Long \u003d\u003e calcIdf(dfs) }\n// val calcIdfUdf \u003d udf { dfs: Long \u003d\u003e math.log((20491 + 1) / (dfs + 1)) }\nval unfoldedDocsUDF \u003d unfoldedDocsDF.withColumn(\"idf\", calcIdfUdf(col(\"df\")))",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:58:16.605",
-      "progress": 0,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635966796867_1649562999",
       "id": "paragraph_1635966796867_1649562999",
       "dateCreated": "2021-11-03 19:13:16.879",
-      "dateStarted": "2021-11-03 20:44:12.077",
-      "dateFinished": "2021-11-03 20:44:13.971",
-      "status": "ABORT"
+      "dateStarted": "2021-11-04 13:19:39.020",
+      "dateFinished": "2021-11-04 13:19:39.600",
+      "status": "FINISHED"
     },
     {
-      "text": "unfoldedDocsUDF.schema",
+      "text": "idf.show",
       "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:58:19.052",
-      "progress": 0,
+      "dateUpdated": "2021-11-04 13:19:42.296",
+      "progress": 96,
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -587,52 +593,42 @@
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635969132155_565607396",
-      "id": "paragraph_1635969132155_565607396",
-      "dateCreated": "2021-11-03 19:52:12.157",
-      "dateStarted": "2021-11-03 20:27:09.737",
-      "dateFinished": "2021-11-03 20:27:12.329",
-      "status": "ABORT"
-    },
-    {
-      "text": "unfoldedDocsUDF.show",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:58:20.271",
-      "progress": 32,
-      "config": {
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "colWidth": 12.0,
-        "editorMode": "ace/mode/scala",
-        "fontSize": 9.0,
-        "results": {},
-        "enabled": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+-----+-------------------+\n|    token|   df|                idf|\n+---------+-----+-------------------+\n|    hotel|16319|0.22764324297506697|\n|     room|14049|0.37741220731886344|\n|      not|12123| 0.5248476239146217|\n|    staff|11522| 0.5756895184231691|\n|    great|11020| 0.6202320109713476|\n|     stay|10094| 0.7079943191056576|\n|     good| 9277| 0.7923885365012432|\n|   stayed| 8549| 0.8741032962987842|\n|       nt| 8379| 0.8941866740612332|\n|    rooms| 8336| 0.8993311110230572|\n| location| 8164| 0.9201778776651405|\n|     just| 7736| 0.9740205247620138|\n|    clean| 7648| 0.9854596615720738|\n|     nice| 7415| 1.0163947078423756|\n|      did| 7204| 1.0452593306568616|\n|breakfast| 7111|  1.058251087504751|\n|       no| 6809| 1.1016424437282084|\n|    night| 6328| 1.1748923570262166|\n|  service| 6228| 1.1908187790138616|\n|     time| 6151| 1.2032573403890534|\n+---------+-----+-------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d53"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635966144210_227254829",
       "id": "paragraph_1635966144210_227254829",
       "dateCreated": "2021-11-03 19:02:24.212",
-      "dateStarted": "2021-11-03 20:44:17.059",
-      "dateFinished": "2021-11-03 20:44:00.207",
-      "status": "ABORT"
+      "dateStarted": "2021-11-04 13:19:42.304",
+      "dateFinished": "2021-11-04 13:19:51.997",
+      "status": "FINISHED"
     },
     {
-      "text": "tokensWithTf\n      .join(tokensWithIdf, Seq(\"token\"), \"left\")\n      .withColumn(\"tf_idf\", col(\"tf\") * col(\"idf\"))",
+      "text": "val tfidf \u003d tf\n      .join(idf, Seq(\"token\"), \"right\")\n      .withColumn(\"tf_idf\", round(col(\"tf\") * col(\"idf\"), 4))",
       "user": "anonymous",
-      "dateUpdated": "2021-11-03 19:51:36.176",
+      "dateUpdated": "2021-11-04 13:44:07.491",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -650,6 +646,15 @@
       "settings": {
         "params": {},
         "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtfidf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [token: string, doc_id: bigint ... 4 more fields]\n"
+          }
+        ]
       },
       "apps": [],
       "runtimeInfos": {},
@@ -657,133 +662,180 @@
       "jobName": "paragraph_1635969072619_591945356",
       "id": "paragraph_1635969072619_591945356",
       "dateCreated": "2021-11-03 19:51:12.648",
-      "status": "READY"
+      "dateStarted": "2021-11-04 13:44:07.495",
+      "dateFinished": "2021-11-04 13:44:07.769",
+      "status": "FINISHED"
     },
     {
-      "text": "",
+      "text": "tfidf.show",
       "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.958",
-      "progress": 0,
-      "config": {},
+      "dateUpdated": "2021-11-04 13:44:09.371",
+      "progress": 94,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----------+---+-----+-------------------+------+\n|token|     doc_id| tf|   df|                idf|tf_idf|\n+-----+-----------+---+-----+-------------------+------+\n|hotel|25769804372|  3|16319|0.22764324297506697|0.6829|\n|hotel|25769804331|  3|16319|0.22764324297506697|0.6829|\n|hotel|25769803965|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179874702|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179874388|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179874316|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179873502|  1|16319|0.22764324297506697|0.2276|\n|hotel|17179873434|  1|16319|0.22764324297506697|0.2276|\n|hotel|17179873246|  3|16319|0.22764324297506697|0.6829|\n|hotel|17179873193|  1|16319|0.22764324297506697|0.2276|\n|hotel|17179873150|  3|16319|0.22764324297506697|0.6829|\n|hotel|17179873072|  4|16319|0.22764324297506697|0.9106|\n|hotel|17179873031|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179871970|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179871382|  2|16319|0.22764324297506697|0.4553|\n|hotel|17179871044|  3|16319|0.22764324297506697|0.6829|\n|hotel|17179870930|  3|16319|0.22764324297506697|0.6829|\n|hotel|17179870811|  1|16319|0.22764324297506697|0.2276|\n|hotel|17179870370|  3|16319|0.22764324297506697|0.6829|\n|hotel|17179870205|  4|16319|0.22764324297506697|0.9106|\n+-----+-----------+---+-----+-------------------+------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d82"
+            },
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d83"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635969072208_1327102510",
       "id": "paragraph_1635969072208_1327102510",
       "dateCreated": "2021-11-03 19:51:12.232",
-      "status": "READY"
+      "dateStarted": "2021-11-04 13:44:09.377",
+      "dateFinished": "2021-11-04 13:44:27.636",
+      "status": "FINISHED"
     },
     {
-      "text": "",
+      "text": "val tfidf_pivot \u003d tfidf.groupBy(\"token\").pivot(\"tf\").max(\"tf_idf\").na.fill(0)",
       "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.963",
-      "progress": 0,
-      "config": {},
+      "dateUpdated": "2021-11-04 13:44:11.072",
+      "progress": 100,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtfidf_pivot\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [token: string, 1: double ... 34 more fields]\n"
+          }
+        ]
+      },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d84"
+            },
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d85"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635969071644_1123206758",
       "id": "paragraph_1635969071644_1123206758",
       "dateCreated": "2021-11-03 19:51:11.647",
-      "status": "READY"
+      "dateStarted": "2021-11-04 13:44:11.078",
+      "dateFinished": "2021-11-04 13:44:45.942",
+      "status": "FINISHED"
     },
     {
-      "text": "",
+      "text": "tfidf_pivot.show",
       "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.964",
-      "progress": 0,
-      "config": {},
+      "dateUpdated": "2021-11-04 13:44:12.500",
+      "progress": 99,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+------+------+------+------+------+------+------+------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+-------+-------+-------+-------+-------+---+------+------+-------+-------+\n|    token|     1|     2|     3|     4|     5|     6|     7|     8|      9|     10|     11|     12|     13|     14|     15|     16|     17|     18|     19|     20|     21|     22|     23|     24|    25|     26|     27|     29|     30|     31| 32|    33|    34|     36|     52|\n+---------+------+------+------+------+------+------+------+------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+-------+-------+-------+-------+-------+---+------+------+-------+-------+\n|    hotel|0.2276|0.4553|0.6829|0.9106|1.1382|1.3659|1.5935|1.8211| 2.0488| 2.2764| 2.5041| 2.7317| 2.9594|  3.187| 3.4146| 3.6423| 3.8699| 4.0976| 4.3252| 4.5529| 4.7805| 5.0082|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|7.5122|7.7399|    0.0|    0.0|\n|     room|0.3774|0.7548|1.1322|1.5096|1.8871|2.2645|2.6419|3.0193| 3.3967| 3.7741| 4.1515| 4.5289| 4.9064| 5.2838| 5.6612| 6.0386|  6.416|    0.0|    0.0| 7.5482|    0.0|    0.0| 8.6805|    0.0|9.4353| 9.8127|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|      not|0.5248|1.0497|1.5745|2.0994|2.6242|3.1491|3.6739|4.1988| 4.7236| 5.2485| 5.7733| 6.2982|  6.823| 7.3479| 7.8727| 8.3976| 8.9224| 9.4473| 9.9721| 10.497|11.0218|11.5466|12.0715|12.5963|   0.0|    0.0|14.1709|15.2206|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|    staff|0.5757|1.1514|1.7271|2.3028|2.8784|3.4541|4.0298|4.6055| 5.1812| 5.7569|    0.0| 6.9083|    0.0|    0.0|    0.0|  9.211|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|    great|0.6202|1.2405|1.8607|2.4809|3.1012|3.7214|4.3416|4.9619| 5.5821| 6.2023| 6.8226| 7.4428|  8.063| 8.6832|    0.0|    0.0|10.5439|    0.0|    0.0|    0.0|13.0249|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|     stay| 0.708| 1.416| 2.124| 2.832|  3.54| 4.248| 4.956| 5.664|    0.0|    0.0| 7.7879|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|     good|0.7924|1.5848|2.3772|3.1696|3.9619|4.7543|5.5467|6.3391| 7.1315| 7.9239| 8.7163| 9.5087|10.3011|11.0934|11.8858|    0.0|13.4706|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|   stayed|0.8741|1.7482|2.6223|3.4964|4.3705|   0.0|   0.0|   0.0|    0.0|  8.741|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|       nt|0.8942|1.7884|2.6826|3.5767|4.4709|5.3651|6.2593|7.1535| 8.0477| 8.9419| 9.8361|10.7302|11.6244|12.5186|13.4128| 14.307|15.2012|16.0954|16.9895|17.8837|18.7779|19.6721|20.5663|    0.0|   0.0|23.2489| 24.143|25.9314|26.8256|27.7198|0.0|   0.0|   0.0|    0.0|46.4977|\n|    rooms|0.8993|1.7987| 2.698|3.5973|4.4967| 5.396|6.2953|7.1946|  8.094| 8.9933| 9.8926| 10.792|    0.0|    0.0|    0.0|    0.0|    0.0| 16.188|    0.0|    0.0|    0.0|19.7853|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n| location|0.9202|1.8404|2.7605|3.6807|4.6009|5.5211|6.4412|7.3614|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|     just| 0.974| 1.948|2.9221|3.8961|4.8701|5.8441|6.8181|7.7922| 8.7662| 9.7402|10.7142|11.6882|12.6623|13.6363|14.6103|15.5843|16.5583|    0.0|    0.0|    0.0|20.4544|    0.0|    0.0|    0.0|   0.0|    0.0|26.2986|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|    clean|0.9855|1.9709|2.9564|3.9418|4.9273|5.9128|   0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|     nice|1.0164|2.0328|3.0492|4.0656| 5.082|6.0984|7.1148|8.1312| 9.1476|10.1639|11.1803|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|      did|1.0453|2.0905|3.1358| 4.181|5.2263|6.2716|7.3168|8.3621| 9.4073|10.4526|11.4979|12.5431|13.5884|14.6336|15.6789|16.7241|    0.0|18.8147|    0.0|20.9052|    0.0|    0.0|    0.0|    0.0|   0.0|27.1767| 28.222|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|37.6293|    0.0|\n|breakfast|1.0583|2.1165|3.1748| 4.233|5.2913|6.3495|7.4078| 8.466| 9.5243|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|       no|1.1016|2.2033|3.3049|4.4066|5.5082|6.6099|7.7115|8.8131| 9.9148|11.0164|12.1181|13.2197|14.3214| 15.423|16.5246|17.6263|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|    night|1.1749|2.3498|3.5247|4.6996|5.8745|7.0494|8.2242|9.3991| 10.574|11.7489|12.9238|14.0987|15.2736|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|  service|1.1908|2.3816|3.5725|4.7633|5.9541|7.1449|8.3357|9.5266|10.7174|11.9082| 13.099|14.2898|    0.0|    0.0|17.8623|19.0531|    0.0|21.4347|    0.0|23.8164|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n|     time|1.2033|2.4065|3.6098| 4.813|6.0163|7.2195|8.4228|9.6261|10.8293|12.0326|13.2358|    0.0|15.6423|16.8456|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|    0.0|   0.0|    0.0|    0.0|    0.0|    0.0|    0.0|0.0|   0.0|   0.0|    0.0|    0.0|\n+---------+------+------+------+------+------+------+------+------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+-------+-------+-------+-------+-------+---+------+------+-------+-------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d86"
+            },
+            {
+              "jobUrl": "http://af9de26d2c74:4040/jobs/job?id\u003d87"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1635969071366_1613154833",
       "id": "paragraph_1635969071366_1613154833",
       "dateCreated": "2021-11-03 19:51:11.397",
-      "status": "READY"
-    },
-    {
-      "text": "",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.967",
-      "progress": 0,
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635966144054_856964264",
-      "id": "paragraph_1635966144054_856964264",
-      "dateCreated": "2021-11-03 19:02:24.055",
-      "status": "READY"
-    },
-    {
-      "text": "",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.970",
-      "progress": 0,
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635966143908_2936583",
-      "id": "paragraph_1635966143908_2936583",
-      "dateCreated": "2021-11-03 19:02:23.908",
-      "status": "READY"
-    },
-    {
-      "text": "",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 21:37:30.972",
-      "progress": 0,
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635966143743_1961149757",
-      "id": "paragraph_1635966143743_1961149757",
-      "dateCreated": "2021-11-03 19:02:23.745",
-      "status": "READY"
-    },
-    {
-      "text": "",
-      "user": "anonymous",
-      "dateUpdated": "2021-11-03 17:41:28.500",
-      "progress": 0,
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1635935510430_2108732099",
-      "id": "paragraph_1635935510430_2108732099",
-      "dateCreated": "2021-11-03 10:31:50.433",
-      "status": "READY"
+      "dateStarted": "2021-11-04 13:44:27.675",
+      "dateFinished": "2021-11-04 13:45:03.267",
+      "status": "FINISHED"
     }
   ],
   "name": "Manual TF-IDF",
